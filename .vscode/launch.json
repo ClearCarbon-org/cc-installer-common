@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Example",
+            "type": "dart",
+            "request": "launch",
+            // "debugConsole" or "terminal". If set to "terminal", will run in the built-in
+            // terminal and will support reading from `stdin`. However some other debug
+            // features may be limited.
+            "console": "debugConsole",
+            "program": "example/main.dart"
+        },
+        {
+            "name": "cc_installer_common",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}

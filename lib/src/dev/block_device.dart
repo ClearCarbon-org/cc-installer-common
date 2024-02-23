@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:cc_installer_common/src/dev/disksize.dart';
 import 'package:collection/collection.dart';
 
 part 'block_device.e.dart';
@@ -9,7 +10,7 @@ class BlockDevice {
   String path;
   String? majMin;
   bool? rm;
-  int size;
+  Bytes size;
   bool? ro;
   String type;
   List<dynamic> mountpoints;
@@ -24,7 +25,7 @@ class BlockDevice {
     required this.path,
     this.majMin,
     this.rm,
-    this.size = 0,
+    this.size = const Bytes(),
     this.ro,
     required this.type,
     this.mountpoints = const <dynamic>[],
@@ -45,7 +46,7 @@ class BlockDevice {
         path: data['path']! as String,
         majMin: data['maj:min'] as String?,
         rm: data['rm'] as bool?,
-        size: data['size'] as int? ?? 0,
+        size: Bytes(data['size'] as int? ?? 0),
         ro: data['ro'] as bool?,
         type: data['type']! as String,
         mountpoints: data['mountpoints'] as List<dynamic>? ?? <dynamic>[],
@@ -61,7 +62,7 @@ class BlockDevice {
         'path': path,
         'maj:min': majMin,
         'rm': rm,
-        'size': size,
+        'size': size.toInt(),
         'ro': ro,
         'type': type,
         'mountpoints': mountpoints,

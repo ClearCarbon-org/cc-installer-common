@@ -10,6 +10,7 @@ environment:
 dependencies:
   collection: ^1.18.0
   dcli: ^3.3.5
+  format: ^1.4.0
   sheller: ^0.4.1
   # path: ^1.8.0
 

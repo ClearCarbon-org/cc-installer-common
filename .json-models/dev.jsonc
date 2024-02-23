@@ -1,0 +1,19 @@
+[
+    {
+        "__className": "BlockDevice",
+        "__path": "/lib/cc_installer_lib/lib/src/dev",
+        "r@name": "nvme0n1",
+        "r@path": "/dev/nvme0n1",
+        "maj:min": "259:0",
+        "rm": false,
+        "d@r@size": 0,
+        "ro": false,
+        "r@type": "disk",
+        "d@r@mountpoints": [],
+        "fstype": null,
+        "id-link": "nvme-eui.e8238fa6bf530001001b448b4bc2bd88",
+        "label": null,
+        "partuuid": null,
+        "uuid": null
+     }
+]
